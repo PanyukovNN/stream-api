@@ -1,6 +1,8 @@
-Источники:
+## Материалы доклада по Stream API
 
-  Видеоматериалы:
+##### Источники:
+
+######   Видеоматериалы:
  1. Сергей Куксенко — Stream API, части 1 и 2
       
       https://www.youtube.com/watch?v=O8oN4KSZEXE
@@ -12,7 +14,7 @@
       https://www.youtube.com/watch?v=RzEiCguFZiY
 
 
-  Статьи:
+######   Статьи:
   1. Причуды Stream API
   
        https://habr.com/ru/company/jugru/blog/337534/
