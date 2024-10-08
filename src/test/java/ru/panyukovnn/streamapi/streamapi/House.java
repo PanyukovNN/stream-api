@@ -1,4 +1,4 @@
-package com.zylex.streamapi.model;
+package ru.panyukovnn.streamapi.streamapi;
 
 public enum House {
     NONE,

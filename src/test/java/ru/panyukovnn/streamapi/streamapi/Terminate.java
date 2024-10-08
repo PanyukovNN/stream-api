@@ -1,7 +1,5 @@
-package com.zylex.streamapi;
+package ru.panyukovnn.streamapi.streamapi;
 
-import com.zylex.streamapi.model.Character;
-import com.zylex.streamapi.model.House;
 import org.junit.Test;
 
 import java.util.Comparator;
@@ -11,29 +9,29 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-import static com.zylex.streamapi.Util.characters;
+import static ru.panyukovnn.streamapi.streamapi.Util.characters;
 
 public class Terminate {
-
-
 
     @Test
     public void count() {
         Stream<Character> stream = characters.stream();
-        stream.count();
+        System.out.println(stream.count());
     }
 
     @Test
     public void collect() {
         List<Character> list = characters.stream()
-                .filter(character -> character.getHouse().equals(House.STARK))
-                .collect(Collectors.toList());
+            .filter(character -> character.getHouse().equals(House.STARK))
+            .collect(Collectors.toList());
     }
 
     @Test
     public void reduce() {
         IntStream intStream = IntStream.of(100, 200, 300, 400);
-        intStream.reduce((acc, value) -> acc + value).orElse(0);
+        int result = intStream.reduce((acc, value) -> acc + value).orElse(0);
+
+        System.out.println(result);
     }
 
     @Test
@@ -48,16 +46,16 @@ public class Terminate {
     public void math() {
         // Только для примитивных стримов
         IntStream.of(100, 200, 300, 400)
-                .average()
-                .ifPresent(System.out::println);
+            .average()
+            .ifPresent(System.out::println);
 
         IntStream.of(100, 200, 300, 400)
-                .max()
-                .ifPresent(System.out::println);
+            .max()
+            .ifPresent(System.out::println);
 
         IntStream.of(100, 200, 300, 400)
-                .min()
-                .ifPresent(System.out::println);
+            .min()
+            .ifPresent(System.out::println);
 
         int sum = IntStream.of(100, 200, 300, 400).sum();
         System.out.println(sum);
@@ -67,7 +65,7 @@ public class Terminate {
 
         Stream<Integer> integerStream = Stream.of(1, 2, 3);
         IntSummaryStatistics intSummaryStatistics2 = integerStream.mapToInt(Integer::valueOf)
-                .summaryStatistics();
+            .summaryStatistics();
 
         System.out.println(intSummaryStatistics2);
     }

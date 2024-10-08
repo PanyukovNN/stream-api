@@ -1,4 +1,4 @@
-package com.zylex.streamapi.model;
+package ru.panyukovnn.streamapi.streamapi;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
